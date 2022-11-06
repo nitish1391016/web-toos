@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vw;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: aliceblue;
+  }
+
+.btn {
+  background-color: pink;
+  padding: 20px 40px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: black;
+  position: relative;
+  /* becaue of overflow hidden we can't see the action transition end  whole circle */
+  overflow: hidden;
+    background-color:rgba(var(--p1), var(--p2), var(--p3));
+
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  background-color: orangered;
+  /* moving point from button top-left point as origin in (PX)*/
+  top: var(--yPos);
+  left: var(--xPos);
+  /* point sizes */
+  /* startin from 0,0  */
+  height: 0px;
+  width: 0px;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  /* making time lapse of change of properties */
+  transition: width 1s, height 1s;
+}
+
+.btn:hover::before {
+  /* ending to size of 300,300 transition time lapsing */
+  width: 300px;
+  height: 300px;
+}
