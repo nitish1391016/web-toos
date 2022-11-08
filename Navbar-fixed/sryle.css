@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+    display: flex;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+.navbar img{
+    overflow:;
+}
+.navbar a{
+    /* width: max-content; */
+    /* background-color: rebeccapurple; */
+    width: 80px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    margin: auto 10px;
+    font-family: cursive;
+    color: black;
+}
+
+.navbar ul li a:hover{
+    color: rgb(237, 1, 40);
+}
+/* Thus the if the active class added than these code executed */
+.navbar.active{
+    background-color: black;
+}
+.navbar.active ul li a{
+    color: white;
+}
+.navbar.active ul li a:hover{
+    color: red;
+}
+
+
+.top-container {
+  background-image: url("https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;          
+  text-align: center;
+}
+
+.top-container h1 {
+  background-color: #857d7b;
+  color: #333332;
+  opacity: 0.8;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+.text{
+    margin: 50px 5%;
+    font-family: sans-serif;
+}
